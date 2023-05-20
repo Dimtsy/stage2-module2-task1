@@ -9,25 +9,32 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.net.UnknownHostException;
 
 @WebServlet("/add")
 public class AddUserServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        getServletContext().getRequestDispatcher("/jsp/add.jsp").forward(req, resp);
+        try {
+            getServletContext().getRequestDispatcher("/jsp/add.jsp").forward(req, resp);
+        } catch (UnknownHostException uhex) {
+            uhex.getCause().printStackTrace();
+        }
     }
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        String firstName = req.getParameter("firstName");
-        String lastName = req.getParameter("lastName");
-        User user = new User(firstName, lastName);
-        req.setAttribute("users", user);
-        Warehouse warehouse = Warehouse.getInstance();
-        warehouse.addUser(user);
-        getServletContext().getRequestDispatcher("/jsp/add.jsp").forward(req, resp);
+        try {
+            String firstName = req.getParameter("firstName");
+            String lastName = req.getParameter("lastName");
+            User user = new User(firstName, lastName);
+            req.setAttribute("users", user);
+            Warehouse warehouse = Warehouse.getInstance();
+            warehouse.addUser(user);
+            getServletContext().getRequestDispatcher("/jsp/add.jsp").forward(req, resp);
+        } catch (UnknownHostException uhex) {
+            uhex.getCause().printStackTrace();
+        }
     }
-
-//write your code here!
 }
