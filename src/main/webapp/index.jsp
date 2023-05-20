@@ -1,7 +1,8 @@
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <!DOCTYPE html>
-<html>
+<htmlxml:lang>
 <head>
+    <title>Title</title>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 </head>
 <body>
@@ -12,4 +13,4 @@
     </div>
 </div>
 </body>
-</html>
+</htmlxml:lang>

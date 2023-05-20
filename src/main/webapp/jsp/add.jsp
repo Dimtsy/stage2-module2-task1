@@ -1,8 +1,9 @@
 <%@ page import="com.example.User" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
-<html>
+<!DOCTYPE><htmlxml:lang>
 <head>
+    <title>Title</title>
     <meta charset="utf-8">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 </head>
@@ -29,4 +30,4 @@
     </div>
 </div>
 </body>
-</html>
+</htmlxml:lang>
