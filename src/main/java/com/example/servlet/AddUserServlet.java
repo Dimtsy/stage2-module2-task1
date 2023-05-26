@@ -3,6 +3,8 @@ package com.example.servlet;
 import com.example.User;
 import com.example.Warehouse;
 
+import javax.servlet.ServletConfig;
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -13,6 +15,9 @@ import java.net.UnknownHostException;
 
 @WebServlet("/add")
 public class AddUserServlet extends HttpServlet {
+    @Override
+    public void init(ServletConfig config) throws ServletException {
+    }
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -32,7 +37,8 @@ public class AddUserServlet extends HttpServlet {
             req.setAttribute("user", user);
             Warehouse warehouse = Warehouse.getInstance();
             warehouse.addUser(user);
-            getServletContext().getRequestDispatcher("/jsp/add.jsp").forward(req, resp);
+
+            req.getServletContext().getRequestDispatcher("/jsp/add.jsp").forward(req, resp);
         } catch (UnknownHostException uhex) {
             uhex.getCause().printStackTrace();
         }

@@ -1,7 +1,7 @@
 <%@ page import="com.example.User" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
-<!DOCTYPE><htmlxml:lang>
+<html>
 <head>
     <title>Title</title>
     <meta charset="utf-8">
@@ -30,4 +30,4 @@
     </div>
 </div>
 </body>
-</htmlxml:lang>
+</html>
