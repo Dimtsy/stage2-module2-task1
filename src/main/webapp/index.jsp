@@ -1,5 +1,6 @@
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <!DOCTYPE html>
+<htmlxml:lang>
 <html>
 <head>
     <title>Title</title>
@@ -13,4 +14,5 @@
     </div>
 </div>
 </body>
+</htmlxml:lang>
 </html>

@@ -1,6 +1,6 @@
 <%@ page import="com.example.User" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-
+<!DOCTYPE><htmlxml:lang>
 <html>
 <head>
     <title>Title</title>
@@ -30,4 +30,5 @@
     </div>
 </div>
 </body>
+</htmlxml:lang>
 </html>

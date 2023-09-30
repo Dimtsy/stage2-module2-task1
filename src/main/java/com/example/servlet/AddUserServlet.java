@@ -15,6 +15,7 @@ import java.io.IOException;
 public class AddUserServlet extends HttpServlet {
     @Override
     public void init(ServletConfig config) throws ServletException {
+
     }
 
     @Override
